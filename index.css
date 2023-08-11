@@ -1,0 +1,137 @@
+
+/* Used the universal selector to add box-sizing, to set a font family and font size, as well as remove any default margins.   */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1.25rem;
+  }
+  
+  /* The body tag was used to set the height and width of the page. Using display flex to position the divs towards the top and center. */
+  /* While adding a gradient background color.  */
+  body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  text-align: center;
+  background-image: linear-gradient(#F3F3F3, #D3D3D3);
+  }
+
+  /* The app container is the to do list's wrapper and here it's size has been set. */
+  .app {
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 800px;
+  }
+
+  /* Styles for the H1 title giving it a different font size, adding thickness to it and giving it a soft dark color. */
+  #title {
+    margin: 0.2rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #333333;
+  }
+
+  /* Styles for the H2 date giving it a new font size and giving it a soft dark color. */
+  #date {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 2rem;
+    margin: 0.2rem;
+    color: #333333;
+  }
+
+  /* Styles for the input field. Added a white background for it while removing the border and outline when its in focus. While adding border raidus to give it rounded corners. */
+  /* Added padding to give it a larger size, margin to make some space around it and to pull the submit button into the input field. While using text align to center the placeholder text and input text. */
+  #item-input {
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    padding: 0.5rem 3rem;
+    margin: 1rem -2.4rem 0rem 0rem;
+    text-align: center;
+  }
+
+  /* Added a soft grey color to the placeholder text. */
+  #item-input::placeholder {
+    color: #999999;
+  }
+
+  /* Styles for the submit button making the background green and the text color white. Removing it's border and outline like with the input field. */
+  /* Adding padding to make it slightly larger and the same size as the input field. Using margin to make some space around it. */
+  #submit {
+    background-color: #66BB6A;
+    color: #FFFFFF;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem 0rem 0rem ;
+    cursor: pointer;
+  }
+
+  /* Added height and margins to it so that it has room to appear, should it appear. That way it won't push everything down or be place inside other objects. */
+  /* Gave it a red color to signial to the user that something went wrong. */
+  #error-msg {
+    height: 1.2rem;
+    margin: 0rem 0rem 1rem 0rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #FF0000;
+  }
+
+  /* Changed the font size, used padding to give the button some size, used border radius to smoothen the edges and removed the border and outline. */
+  /* Added a cursor property to the button to let the users know they can click on them. */
+  #sort-by-name-btn {
+    background-color: #FFA726;
+    color: #FFFFFF;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  /* Added padding to space the edges from the list text. Text align to position the text all the way to the left. Giving the text a soft dark color. */
+  ul {
+    padding: 1rem;
+    margin: 1rem auto 1rem;
+    text-align: start;
+    color: #333333;
+  }
+  /* Added a white background to this list to separate it from the background colour. */
+  /* Removed the list styling and removed the users ability to highlight the list text. */
+  /* Added a position property for the ability to use position absolute in the child container. */
+  ul li {
+    background-color: #FFFFFF;
+    list-style: none;
+    user-select: none;
+    padding: 1rem;
+    position: relative;
+  }
+  /* Added position absolute to position the cross item to the far right of the list using the properties top and right. */
+  /* Adding height and width to it as well as border radius to turn it into a circle. */
+  /* Adding text align and line height to center the cross in the middle of the circle. */
+  ul li span {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 2rem;
+  }
+
+  /* Added a color change when the user hovers over this icon making it appear as a interactive button. */
+  ul li span:hover {
+    background-color: #F3F3F3;
+    color: black;
+  }
